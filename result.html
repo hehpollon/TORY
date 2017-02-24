@@ -1,0 +1,143 @@
+<html>
+  <head>
+
+      <!-- javascript
+      ============================================= -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+      <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="js/result_graph.js"></script>
+      <script type="text/javascript" src="js/canvasjs.min.js"></script>
+
+      <!-- stylesheets
+      ============================================= -->
+      <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+      <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/result.css" rel="stylesheet" type="text/css">
+
+      <!-- Document title
+      ============================================= -->
+      <title>카카오톡 분석기 TORY</title>
+  </head>
+
+  <body>
+    <!-- Header
+    ============================================= -->
+      <header>
+          <div class="headertop" style="background-image:url('images/top_1.png');">
+            <img src="images\LOGO.png" class="center-block" style="padding-top:1%;width:6%;" id="logo">
+          </div>
+          <div class="headerbar">
+              <span class="menu" id="later">
+                  <a herf="#" class="menutxt">상습 지각자</a>
+              </span>
+              <span class="menu" id="maccutter">
+                  <a herf="#" class="menutxt">맥커터</a>
+              </span>
+              <span class="menu" id="shareking">
+                  <a herf="#" class="menutxt">공유킹</a>
+              </span>
+              <span class="menu" id="indecision">
+                  <a herf="#" class="menutxt">결정장애</a>
+              </span>
+              <span class="menu" id="sorryking">
+                  <a herf="#" class="menutxt">ㅈㅅ장인</a>
+              </span>
+          </div>
+      </header><!--end header-->
+
+      <!-- Content
+      ============================================= -->
+      <div class="content">
+          <div class="title">
+            <img src="images\title_late.png" id="titleimg">
+            <br>
+            <img src="images\for_kakao.png" id="titlekakao">
+            <br>
+          </div> <!--end title class -->
+
+          <!-- share and titlebar -->
+          <div class="shareandtitlebar">
+              <div class="shareclass">
+                  <span id="share">공유하기</span>
+              </div>
+              <div class="titlebarclass" id="titlebar" style="background-image:url('images/top_1.png');">
+                  <a herf="#"><img src="images\icn_kakao.png" id="icn_kakao"></a>
+                  <a herf="#"><img src="images\icn_facebook.png" id="icn_facebook"></a>
+              </div>
+          </div>
+
+          <!-- TOP3
+          ============================================= -->
+          <div class="top3">
+            <img src="images\top3.png" id="top3img">
+            <div class="top3content">
+
+                <!--GOLD medal-->
+                <div class="award">
+                    <img src="images\meal_gold.png" id="medal_gold">
+                    <p class="userandcount">
+                        <span id="golduser">양성우형</span>
+                        <span id="goldcount">30회</span>
+                    </p>
+                </div>
+
+                <!--SILVER medal-->
+                <div class="award">
+                  <img src="images\medal_silver.png" id="medal_silver">
+                  <p class="userandcount">
+                      <span id="silveruser">헬리코박터프로젝트</span>
+                      <span id="silvercount">12회</span>
+                  </p>
+                </div>
+
+                <!--BRONZE medal-->
+                <div class="award">
+                  <img src="images\medal_bronze.png" id="medal_bronze">
+                  <p class="userandcount">
+                      <span id="bronzeuser">버벌진트</span>
+                      <span id="bronzecount">11회</span>
+                  </p>
+                </div>
+
+            </div><!--end top3content-->
+          </div>
+          <!--end top3-->
+
+
+          <hr style="height:1px; width:670px; border:5px;background-color: #B7B7B7">
+          <!-- graphs
+          ============================================= -->
+          <div class="graphs">
+            <img src="images\graphs.png" id="graphsimg">
+
+            <!--pie graph-->
+            <div id="chartContainer" style=" height: 50%;
+             width: 80%; margin:50px auto;"></div>
+            <!--<div id="chartContainershadow"></div>-->
+
+          </div>
+          <!--end grahs-->
+
+
+          <hr style="height:1px; width:670px; border:5px;background-color: #B7B7B7">
+          <!-- total
+          ============================================= -->
+          <div class="total">
+              <img src="images\total.png" id="totalimg">
+              <div class="totalcontent">
+                  <p>누구나 지각은 할 수 있습니다. 하지만
+                    <span id="totalcount" class="changetxt">30</span>번은 좀 아니지 않나요,
+                    <span id="firstking" class="changetxt">양성우형</span>씨?
+                    <br>2등이라고 안심하지 마세요,
+                    <span id="secondking" class="changetxt">헬리코박터 프로젝트</span>씨도 잘한건 아니에요.
+                    <br>물론
+                    <span id="thirdking" class="changetxt">버벌진트</span>씨도요. 친구와의 약속, 학교 수업, 중요한 미팅같이 시간을 약속한다는 것은 신뢰에 관한 문제입니다. 이제부터라도
+                    꼭 약속 시간을 지키려고 노력하는 모습을 보여주세요. 다음 테스트에서는 이름이 오르지 않길 바랄게요. 결과물은 카카톡이나 페이스북으로
+                    공유하여 친구들과 재미있게 나눠봐요</p>
+              </div>
+          </div><br><!--end total-->
+      </div><!-- end content-->
+  </body>
+</html>
