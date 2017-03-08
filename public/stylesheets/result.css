@@ -34,12 +34,20 @@ div[id="chartContainershadow"]{
        a[class="menutxt"]{
          color:#5D5D5D;
          font-family:"맑은 고딕";
-         font-size:1.2em;
+         font-size:18px;
+       }
+       a[class="menutxt_select"]{
+         color:#8D4D96;
+         font-family:"맑은 고딕";
+         font-size:18px;
+         border-bottom: solid 4px #8D4D96;
+         padding-bottom:12px;
+         text-decoration:none !important
        }
        a[class="menutxt"]:hover{
          color:#8D4D96;
          font-family:"맑은 고딕";
-         font-size:1.2em;
+         font-size:18px;
          border-bottom: solid 4px #8D4D96;
          padding-bottom:12px;
          text-decoration:none !important
@@ -88,7 +96,9 @@ div[id="chartContainershadow"]{
          font-family:"맑은 고딕";
          color:white;
        }
-
+       .carousel .item img {
+           min-width: 0;
+       }
        /*****공유하기*****/
        div[class="shareandtitlebar"] {
          width: 100%;
@@ -111,7 +121,8 @@ div[id="chartContainershadow"]{
          padding-top:0.45%;
          position:absolute;
          left:70%;
-         width:2%;height:auto%;
+         width:2%;height:auto;
+         width:2%;height:auto;
        }
       #icn_kakao{
          padding-top:0.5%;
@@ -142,7 +153,7 @@ div[id="chartContainershadow"]{
        div[class="award"]{
          font-family:"맑은 고딕";
          font-size:20px;
-         width:75%;height:6%;
+         width:75%;height:42px;
          margin:23px auto;
          background-color:white;
          border-radius: 30px;
@@ -167,19 +178,15 @@ div[id="chartContainershadow"]{
 
        /*****medal img*****/
        #medal_gold,#medal_silver,#medal_bronze{
-         position:absolute;
-         left:35%;
-         height:8%;
-         width:auto;
+         height:120%;
+         margin-top: -5px;
+         float: left;
        }
        #medal_gold{
-         top:86.5%;
        }
        #medal_silver{
-         top:95%;
        }
        #medal_bronze{
-         top:104%;
        }
 
 

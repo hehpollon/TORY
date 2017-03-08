@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript">
+      $(function() {
+        alert("hi");
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>을 업로드해주세요^^</p>
+
+    ----------------------------------------
+
+    <form action="/send" method="post" enctype="multipart/form-data">
+      <p>
+        <input type="checkbox" name="option" value="pig">1. 미래돼지
+        <input type="checkbox" name="option" value="fuck">2. 욕쟁이
+        <input type="checkbox" name="option" value="photo">3. 인스타그래머
+      </p>
+      <p>
+        <input type="checkbox" name="option" value="sorry">4. 죄송장인
+        <input type="checkbox" name="option" value="chat_end">5. 맥커터
+        <input type="checkbox" name="option" value="chat_start">6. 맥스타터
+      </p>
+      <p>
+        <input type="checkbox" name="option" value="disorder">7. 결정장애
+        <input type="checkbox" name="option" value="share">8. 공유왕
+      </p>
+      <p><input type="file" name="fileselect[]">
+      <p><button type="submit" id="file_upload">Submit</button>
+    </form>
+  </body>
+</html>
