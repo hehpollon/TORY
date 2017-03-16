@@ -89,7 +89,13 @@
       		FileDragHover(e);
       
       		// fetch FileList object
-      		var files = e.target.files || e.dataTransfer.files;
+		var files = e.target.files || e.dataTransfer.files;
+		var filetype = files[0].name.slice(-3);
+		if(filetype != 'txt' && filetype != 'csv' && filetype != 'zip'){
+		  alert('올바른 파일이 아닙니다!');
+		  this.form.reset();
+		  return;
+		}
       
       		// process all File objects
       		for (var i = 0, f; f = files[i]; i++) {
@@ -110,7 +116,7 @@
 
               numberStep: percent_number_step
             },
-            10000,
+            5000,
             function() {
               $("#upload").submit();
             }

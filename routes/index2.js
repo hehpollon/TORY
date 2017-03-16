@@ -487,16 +487,20 @@ function FindLateKing(jsonData, cb){
 
 router.post('/send', upload.single('fileselect[]'), function(req, res, next) {
 
-  var checkedOptions = req.body.option;
-  console.log(checkedOptions);
-
-
+    var checkedOptions = req.body.option;
+    if(typeof checkedOptions == 'string'){
+        checkedOptions = [];
+        checkedOptions.push(req.body.option);
+    }
+    
   // console.log(req.files);
   console.log('-------------')
   console.log(req.file);
   var filePath = './' + req.file.path;
 
-  var checkedLength = checkedOptions.length;
+    var checkedLength = checkedOptions.length;
+
+
   // console.log(checkedLength);
   // ar counter = 0;
   var array = [];
@@ -628,7 +632,7 @@ router.post('/send', upload.single('fileselect[]'), function(req, res, next) {
     var final_array = [];
     var split_data = result.split("^^^^^");
 
-    for (var i = 0; i < checkedLength; i++) {
+      for (var i = 0; i < checkedLength; i++) {
 
       var simple_data = split_data[i+1];
 
